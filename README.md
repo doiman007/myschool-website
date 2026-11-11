@@ -1,29 +1,30 @@
-# Welcome to your Lovable project
+# 🏫 เว็บไซต์โรงเรียนอนุบาลองค์การบริหารส่วนตำบลวาเล่ย์
 
-This project was built with [Lovable](https://lovable.dev).
+เว็บไซต์โรงเรียนในสังกัดองค์การบริหารส่วนตำบลวาเล่ย์ อำเภอพบพระ จังหวัดตาก
 
-## Build with Lovable
+## 🌐 เปิดดูเว็บไซต์โรงเรียน
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+**[คลิกเพื่อเปิดตัวอย่างเว็บไซต์โรงเรียน (Lovable Preview)](https://id-preview--e6106ab5-b5a1-4898-9d53-07f8c47eafc2.lovable.app)**
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+**[เปิดหน้าจัดการเว็บไซต์ใน Lovable](https://lovable.dev/projects/e6106ab5-b5a1-4898-9d53-07f8c47eafc2)**
 
-## Development
+> หมายเหตุ: ลิงก์ข้างต้นเป็นการเปิดตัวอย่างเว็บไซต์จาก Lovable ไม่ใช่เว็บไซต์ที่โฮสต์ด้วย GitHub Pages และยังไม่ใช่เว็บไซต์โรงเรียนที่เผยแพร่เป็นทางการ อาจจำเป็นต้องมีสิทธิ์เข้าดูตัวอย่างจาก Lovable
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## 📂 Source Code
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Branch นี้เป็นสำเนาโค้ดสำหรับเตรียมย้ายไป Cloudflare Workers โดยใช้ Supabase เดิม ข้อมูลนักเรียนและรหัสลับไม่ได้อยู่ใน GitHub
 
-## Built with
+- [การตั้งค่า Cloudflare Workers](wrangler.jsonc)
+- [คู่มือการ Deploy](CLOUDFLARE_DEPLOY.md)
+- [รายละเอียดการส่งออกไฟล์](EXPORT_NOTES.md)
+- [GitHub Actions](.github/workflows/deploy-wale-cloudflare.yml)
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+**สถานะ:** ยังไม่ได้ Deploy บน Cloudflare และยังไม่ได้ยืนยันการทำงานของระบบหลังบ้าน/รับสมัครบนเซิร์ฟเวอร์ใหม่
+
+## เทคโนโลยี
+
+TanStack Start, React, TypeScript, Tailwind CSS, Supabase
+
+## ข้อควรระวัง
+
+GitHub เป็นที่เก็บ Source Code โดยตรง ไม่สามารถเปิดใช้งานแอป TanStack Start ที่มี server-side functions และระบบหลังบ้านได้เพียงแค่เปิดไฟล์บน GitHub; ต้อง Build และ Deploy บนแพลตฟอร์มที่รองรับ เช่น Cloudflare Workers ก่อน
